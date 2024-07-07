@@ -1,0 +1,64 @@
+/* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/base/_base.scss */
+* {
+  font-family: "Martel Sans", sans-serif;
+  overflow: hidden;
+}
+
+/* line 6, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/base/_base.scss */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_header.scss */
+header {
+  display: flex;
+  flex-direction: row;
+  background: #7477BF;
+  padding: 0 20px;
+  color: #fff;
+}
+
+/* line 9, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_header.scss */
+header strong {
+  font-weight: 500;
+}
+
+/* line 13, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_header.scss */
+header div {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+/* line 19, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_header.scss */
+header h1 {
+  font-weight: 200;
+}
+
+/* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_leftNav.scss */
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #4D4C72;
+  padding: 20px 0;
+}
+
+/* line 10, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_leftNav.scss */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* line 19, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_leftNav.scss */
+nav li {
+  display: inline-block;
+}
+
+/*# sourceMappingURL=styles.css.map */

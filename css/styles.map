@@ -1,0 +1,18 @@
+{
+	"version": 3,
+	"file": "styles.css",
+	"sources": [
+		"../scss/styles.scss",
+		"../scss/base/_base.scss",
+		"../scss/components/_header.scss",
+		"../scss/components/_leftNav.scss"
+	],
+	"sourcesContent": [
+		"@import \"base/base\",\r\n        \"components/header\",\r\n        \"components/leftNav\";",
+		"* {\r\n    font-family: \"Martel Sans\", sans-serif;\r\n    overflow: hidden;\r\n}\r\n\r\nbody {\r\n    margin: 0;\r\n    padding: 0;\r\n}",
+		"header {\r\n    display: flex;\r\n    flex-direction: row;\r\n    background: #7477BF;\r\n    padding: 0 20px;\r\n    color: #fff;\r\n}\r\n\r\nheader strong {\r\n    font-weight: 500;\r\n}\r\n\r\nheader div {\r\n    display: flex;\r\n    align-items: center;\r\n    margin-left: auto;\r\n}\r\n\r\nheader h1 {\r\n    font-weight: 200;\r\n}",
+		"nav {\r\n    display: flex;\r\n    flex-direction: row;\r\n    justify-content: center;\r\n    align-items: center;\r\n    background: #4D4C72;\r\n    padding: 20px 0;\r\n}\r\n\r\nnav ul {\r\n    list-style-type: none;\r\n    margin: 0;\r\n    padding: 0;\r\n    width: 100%;\r\n    display: flex;\r\n    justify-content: space-evenly;\r\n}\r\n\r\nnav li {\r\n    display: inline-block;\r\n}"
+	],
+	"names": [],
+	"mappings": ";ACAA,AAAA,CAAC,CAAC;EACE,WAAW,EAAE,yBAAyB;EACtC,QAAQ,EAAE,MAAM;CACnB;;;AAED,AAAA,IAAI,CAAC;EACD,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CACb;;;ACRD,AAAA,MAAM,CAAC;EACH,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,GAAG;EACnB,UAAU,EAAE,OAAO;EACnB,OAAO,EAAE,MAAM;EACf,KAAK,EAAE,IAAI;CACd;;;AAED,AAAA,MAAM,CAAC,MAAM,CAAC;EACV,WAAW,EAAE,GAAG;CACnB;;;AAED,AAAA,MAAM,CAAC,GAAG,CAAC;EACP,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;EACnB,WAAW,EAAE,IAAI;CACpB;;;AAED,AAAA,MAAM,CAAC,EAAE,CAAC;EACN,WAAW,EAAE,GAAG;CACnB;;;ACpBD,AAAA,GAAG,CAAC;EACA,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,GAAG;EACnB,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,OAAO;EACnB,OAAO,EAAE,MAAM;CAClB;;;AAED,AAAA,GAAG,CAAC,EAAE,CAAC;EACH,eAAe,EAAE,IAAI;EACrB,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,YAAY;CAChC;;;AAED,AAAA,GAAG,CAAC,EAAE,CAAC;EACH,OAAO,EAAE,YAAY;CACxB"
+}
