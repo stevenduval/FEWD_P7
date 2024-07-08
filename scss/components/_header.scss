@@ -2,18 +2,54 @@ header {
     display: flex;
     flex-direction: row;
     background: #7477BF;
-    padding: 0 20px;
+    padding: 10px;
     color: #fff;
+    align-items: center;
+    height: 55px;
+    box-sizing: border-box;
+}
+
+header h1 {
+    font-size: 1.25rem;
 }
 
 header strong {
     font-weight: 500;
 }
 
-header div {
+.notification {
     display: flex;
     align-items: center;
     margin-left: auto;
+    height: 100%;
+    border-right: 1px solid #8E92B7;
+    padding: 7px 10px;
+    box-sizing: border-box;
+}
+
+.notification img {
+    width: auto;
+    height: 100%;
+    box-sizing: border-box;
+    min-height: 0;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.profile p {
+    font-size: 0.75rem;
+    font-weight: 200;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: auto;
+    height: 100%;
+    margin: 0 10px;
 }
 
 header h1 {

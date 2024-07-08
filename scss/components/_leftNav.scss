@@ -4,7 +4,9 @@ nav {
     justify-content: center;
     align-items: center;
     background: #4D4C72;
-    padding: 20px 0;
+    padding: 10px 15px;
+    height: 50px;
+    box-sizing: border-box;
 }
 
 nav ul {
@@ -14,8 +16,14 @@ nav ul {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    height: 100%;
 }
 
 nav li {
     display: inline-block;
+}
+
+nav li img {
+    width: auto;
+    height: 100%;
 }
