@@ -6,3 +6,19 @@ body {
     margin: 0;
     padding: 0;
 }
+
+h2 { 
+    font-size: 1em;
+}
+
+button {
+    background: none;
+    border: none;
+    padding: 3px 10px;
+}
+
+button.active {
+    background: #81C98F;
+    border-radius: 20px;
+    color: white;
+}

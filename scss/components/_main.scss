@@ -1,0 +1,7 @@
+main section ~ section {
+    padding: 0 15px;
+}
+
+main section:nth-child(n+4) {  
+    border-top: 0.1em solid #D5D5D5;
+}
