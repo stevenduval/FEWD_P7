@@ -1,10 +1,9 @@
 /* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/base/_base.scss */
 * {
   font-family: "Martel Sans", sans-serif;
-  overflow: hidden;
 }
 
-/* line 6, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/base/_base.scss */
+/* line 5, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/base/_base.scss */
 body {
   margin: 0;
   padding: 0;
@@ -15,7 +14,7 @@ header {
   display: flex;
   flex-direction: row;
   background: #7477BF;
-  padding: 10px;
+  padding: 12px;
   color: #fff;
   align-items: center;
   height: 55px;
@@ -38,8 +37,8 @@ header strong {
   align-items: center;
   margin-left: auto;
   height: 100%;
-  border-right: 1px solid #8E92B7;
-  padding: 7px 10px;
+  border-right: 0.1em solid #8E92B7;
+  padding: 5px 10px;
   box-sizing: border-box;
 }
 
@@ -109,6 +108,32 @@ nav li {
 nav li img {
   width: auto;
   height: 100%;
+}
+
+/* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_tabs.scss */
+.tabs {
+  background: #F7F7F7;
+  display: flex;
+  border-bottom: 0.1em solid #ccc;
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  top: -0.1em;
+}
+
+/* line 11, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_tabs.scss */
+.tabs .item {
+  background: white;
+  border-right: 0.1em solid #D5D5D5;
+  padding: 0 12px;
+  position: relative;
+  z-index: 1;
+  top: 0.1em;
+}
+
+/* line 20, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_tabs.scss */
+.tabs .item h2 {
+  font-size: 1em;
 }
 
 /*# sourceMappingURL=styles.css.map */
