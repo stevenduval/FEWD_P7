@@ -46,7 +46,7 @@ const trafficLineChart = new Chart(document.getElementById('traffic'), {
     datasets: [
       {
         data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1800, 2250, 1500, 2500],
-        backgroundColor: 'rgba(213, 214, 236, 0.5)',
+        backgroundColor: 'rgba(116, 119, 191, 0.3)',
         fill: true,
         lineTension: 0.4,
       },

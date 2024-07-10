@@ -10,8 +10,8 @@ body {
 }
 
 /* line 10, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/base/_base.scss */
-h2 {
-  font-size: 1em;
+h2, legend {
+  font-size: 0.85em;
 }
 
 /* line 14, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/base/_base.scss */
@@ -176,6 +176,12 @@ canvas {
 }
 
 /* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_social.scss */
+.social {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* line 6, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_social.scss */
 .social .card {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
@@ -187,7 +193,7 @@ canvas {
   margin-bottom: 20px;
 }
 
-/* line 12, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_social.scss */
+/* line 17, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_social.scss */
 .social .icon {
   background: #7477BF;
   border-radius: 50%;
@@ -197,32 +203,217 @@ canvas {
   width: 60px;
 }
 
-/* line 21, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_social.scss */
+/* line 26, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_social.scss */
 .social .icon img {
   padding: 15px;
 }
 
-/* line 25, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_social.scss */
-.social .text {
+/* line 30, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_social.scss */
+.social .info {
   display: flex;
   flex-direction: column;
 }
 
-/* line 29, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_social.scss */
-.social .text h3 {
+/* line 34, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_social.scss */
+.social .info h3 {
   color: #6366B7;
   font-weight: 600;
   margin: 0;
   font-size: 1em;
 }
 
-/* line 36, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_social.scss */
-.social .text p {
+/* line 41, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_social.scss */
+.social .info p {
   margin: 0;
   color: #777777;
   font-size: 2.5em;
   line-height: 1;
   font-weight: 200;
+}
+
+/* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
+.members .card:nth-child(n+3) {
+  border-top: 0.1em solid #D5D5D5;
+}
+
+/* line 5, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
+.members .card {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15px 0;
+}
+
+/* line 14, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
+.members .card:nth-of-type(1) {
+  padding-top: 0;
+}
+
+/* line 18, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
+.members .card .icon {
+  height: 55px;
+}
+
+/* line 22, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
+.members .card .icon img {
+  border-radius: 50%;
+  height: 100%;
+  width: auto;
+}
+
+/* line 28, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
+.members .info {
+  padding-top: 5px;
+}
+
+/* line 32, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
+.members .info h3 {
+  font-weight: 400;
+}
+
+/* line 36, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
+.members .info a {
+  text-decoration: none;
+  display: block;
+  color: #777AC1;
+}
+
+/* line 42, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
+.members .info h3,
+.members .info a,
+.members .info p,
+.members .date p {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 0.75em;
+}
+
+/* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_activity.scss */
+.activity .card:nth-child(n+3) {
+  border-top: 0.1em solid #D5D5D5;
+}
+
+/* line 5, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_activity.scss */
+.activity .card {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15px 10px;
+}
+
+/* line 14, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_activity.scss */
+.activity .card:nth-of-type(1) {
+  padding-top: 0;
+}
+
+/* line 18, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_activity.scss */
+.activity .card .icon {
+  height: 55px;
+}
+
+/* line 22, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_activity.scss */
+.activity .card .icon img {
+  border-radius: 50%;
+  height: 100%;
+  width: auto;
+}
+
+/* line 28, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_activity.scss */
+.activity .info-section1 {
+  padding-top: 5px;
+}
+
+/* line 32, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_activity.scss */
+.activity .info-section1 a {
+  text-decoration: none;
+  display: block;
+  color: #777AC1;
+}
+
+/* line 38, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_activity.scss */
+.activity .info-section1 a,
+.activity .info-section1 p,
+.activity .info-section2 p {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 0.75em;
+}
+
+/* line 46, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_activity.scss */
+.activity .info-section2 {
+  display: none;
+}
+
+/* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
+.message legend {
+  padding: 0;
+  margin-bottom: 0.83em;
+  font-weight: 700;
+}
+
+/* line 7, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
+.message label {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* line 18, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
+.message fieldset {
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0;
+  margin: 0.83em 0 0;
+}
+
+/* line 27, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
+.message input {
+  margin-bottom: 15px;
+  padding: 10px 10px;
+  background: #F7F7F7;
+  border: 0.1em solid #D5D5D5;
+  border-radius: 5px;
+  flex: 0 100%;
+}
+
+/* line 36, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
+.message textarea {
+  background: #F7F7F7;
+  border: 0.1em solid #D5D5D5;
+  border-radius: 5px;
+  flex: 0 100%;
+  height: 100px;
+  padding: 5px 10px;
+}
+
+/* line 45, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
+input::placeholder,
+textarea::placeholder {
+  color: #BDBDBD;
+}
+
+/* line 50, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
+button[type="submit"] {
+  margin: 15px 0;
+  width: 100%;
+  padding: 8px 0;
+  color: #FFFFFF;
+  background: #7477BF;
+  border-radius: 5px;
+  border: 0.1em solid #D5D5D5;
+  font-weight: 200;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=styles.css.map */

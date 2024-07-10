@@ -1,0 +1,49 @@
+.members .card:nth-child(n+3) {  
+    border-top: 0.1em solid #D5D5D5;
+}
+
+.members .card {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.members .card:nth-of-type(1) {
+    padding-top: 0;
+}
+
+.members .card .icon {
+    height: 55px;
+}
+
+.members .card .icon img {
+    border-radius: 50%;
+    height: 100%;
+    width: auto;
+}
+
+.members .info {
+    padding-top: 5px;
+}
+
+.members .info h3 {
+    font-weight: 400;
+}
+
+.members .info a {
+    text-decoration: none;
+    display: block;
+    color: #777AC1;
+}
+
+.members .info h3,
+.members .info a,
+.members .info p,
+.members .date p {
+    margin: 0;
+    line-height: 1.15;
+    font-size: 0.75em;
+}

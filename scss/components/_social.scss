@@ -1,3 +1,8 @@
+.social {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
 .social .card {
     display: grid;
     grid-template-columns: auto minmax(0, 1fr);
@@ -22,18 +27,18 @@
     padding: 15px;
 }
 
-.social .text {
+.social .info {
     display: flex;
     flex-direction: column;
 }
-.social .text h3 {
+.social .info h3 {
     color: #6366B7;
     font-weight: 600;
     margin: 0;
     font-size: 1em;
 }
 
-.social .text p {
+.social .info p {
     margin: 0;
     color: #777777;
     font-size: 2.5em;

@@ -1,0 +1,48 @@
+.activity .card:nth-child(n+3) {  
+    border-top: 0.1em solid #D5D5D5;
+}
+
+.activity .card {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px 10px;
+}
+
+.activity .card:nth-of-type(1) {
+    padding-top: 0;
+}
+
+.activity .card .icon {
+    height: 55px;
+}
+
+.activity .card .icon img {
+    border-radius: 50%;
+    height: 100%;
+    width: auto;
+}
+
+.activity .info-section1 {
+    padding-top: 5px;
+}
+
+.activity .info-section1 a {
+    text-decoration: none;
+    display: block;
+    color: #777AC1;
+}
+
+.activity .info-section1 a,
+.activity .info-section1 p,
+.activity .info-section2 p {
+    margin: 0;
+    line-height: 1.15;
+    font-size: 0.75em;
+}
+
+.activity .info-section2 {
+    display: none;
+}
