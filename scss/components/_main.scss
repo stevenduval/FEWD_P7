@@ -1,3 +1,8 @@
+.wrapper, main {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+}
+
 main section ~ section {
     padding: 0 15px;
 }

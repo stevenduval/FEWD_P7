@@ -1,0 +1,106 @@
+.settings {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.settings .toggles {
+    display: grid;
+    align-items: center;
+    grid-template: repeat(2, fit-content(300px)) / repeat(2, fit-content(300px));
+    justify-content: space-between;
+}
+
+.settings .toggles label {
+    font-size: 0.85em;
+}
+
+.settings .toggles input {
+    cursor: pointer;
+    margin: 1rem auto;
+    position: relative;
+    width: 85px;
+    height: 30px;
+    border-radius: 25px;
+    outline: none;
+    background-color: #ccc;
+    -webkit-appearance: none;
+    transition: background .3s;
+    border: 0.15em solid #c0c0c0;
+}
+
+.settings .toggles input::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    height: 1rem;
+    width: 1rem;
+    background-color: white;
+    transition: left .3s;
+    border: 0.15em solid #c0c0c0;
+}
+.settings .toggles input:checked {
+    background-color: #7477BF;
+}
+
+.settings .toggles input:checked::after {
+    left: 82%;
+}
+
+.settings .toggles input::before {
+    content: 'OFF';
+    position: absolute;
+    top: 0.2em;
+    right: 10px;
+    color: #fff;
+    font-weight: 200;
+}
+
+.settings .toggles input:checked::before {
+    content: 'ON';
+    position: absolute;
+    top: 0.2em;
+    left: 10px;
+    color: #fff;
+    font-weight: 200;
+}
+
+.settings select {
+    margin-top: 15px;
+    background: #F7F7F7;
+    padding: 10px 10px;
+    border: 0.1em solid #D5D5D5;
+    border-radius: 5px;
+}
+
+.settings .actions {
+    margin-top: 15px;
+    column-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+}
+
+.settings .actions button.save {
+    width: 100%;
+    padding: 8px 0;
+    color: #FFFFFF;
+    background: #7477BF;
+    border-radius: 5px;
+    border: 0.1em solid #D5D5D5;
+    font-weight: 200;
+    cursor: pointer;
+}
+
+.settings .actions button.cancel {
+    width: 100%;
+    padding: 8px 0;
+    color: #FFFFFF;
+    background: #999;
+    border-radius: 5px;
+    border: 0.1em solid #D5D5D5;
+    font-weight: 200;
+    cursor: pointer;
+}

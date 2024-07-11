@@ -130,11 +130,17 @@ nav li img {
 }
 
 /* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
+.wrapper, main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+/* line 6, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
 main section ~ section {
   padding: 0 15px;
 }
 
-/* line 5, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
+/* line 10, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
 main section:nth-child(n+4) {
   border-top: 0.1em solid #D5D5D5;
 }
@@ -241,46 +247,45 @@ canvas {
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
-  align-items: center;
   text-align: center;
   padding: 15px 0;
 }
 
-/* line 14, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
+/* line 13, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
 .members .card:nth-of-type(1) {
   padding-top: 0;
 }
 
-/* line 18, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
+/* line 17, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
 .members .card .icon {
   height: 55px;
 }
 
-/* line 22, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
+/* line 21, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
 .members .card .icon img {
   border-radius: 50%;
   height: 100%;
   width: auto;
 }
 
-/* line 28, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
+/* line 27, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
 .members .info {
   padding-top: 5px;
 }
 
-/* line 32, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
+/* line 31, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
 .members .info h3 {
   font-weight: 400;
 }
 
-/* line 36, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
+/* line 35, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
 .members .info a {
   text-decoration: none;
   display: block;
   color: #777AC1;
 }
 
-/* line 42, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
+/* line 41, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
 .members .info h3,
 .members .info a,
 .members .info p,
@@ -410,6 +415,127 @@ button[type="submit"] {
   padding: 8px 0;
   color: #FFFFFF;
   background: #7477BF;
+  border-radius: 5px;
+  border: 0.1em solid #D5D5D5;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+/* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
+.settings {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+/* line 7, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
+.settings .toggles {
+  display: grid;
+  align-items: center;
+  grid-template: repeat(2, fit-content(300px))/repeat(2, fit-content(300px));
+  justify-content: space-between;
+}
+
+/* line 14, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
+.settings .toggles label {
+  font-size: 0.85em;
+}
+
+/* line 18, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
+.settings .toggles input {
+  cursor: pointer;
+  margin: 1rem auto;
+  position: relative;
+  width: 85px;
+  height: 30px;
+  border-radius: 25px;
+  outline: none;
+  background-color: #ccc;
+  -webkit-appearance: none;
+  transition: background .3s;
+  border: 0.15em solid #c0c0c0;
+}
+
+/* line 32, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
+.settings .toggles input::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  height: 1rem;
+  width: 1rem;
+  background-color: white;
+  transition: left .3s;
+  border: 0.15em solid #c0c0c0;
+}
+
+/* line 45, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
+.settings .toggles input:checked {
+  background-color: #7477BF;
+}
+
+/* line 49, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
+.settings .toggles input:checked::after {
+  left: 82%;
+}
+
+/* line 53, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
+.settings .toggles input::before {
+  content: 'OFF';
+  position: absolute;
+  top: 0.2em;
+  right: 10px;
+  color: #fff;
+  font-weight: 200;
+}
+
+/* line 62, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
+.settings .toggles input:checked::before {
+  content: 'ON';
+  position: absolute;
+  top: 0.2em;
+  left: 10px;
+  color: #fff;
+  font-weight: 200;
+}
+
+/* line 71, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
+.settings select {
+  margin-top: 15px;
+  background: #F7F7F7;
+  padding: 10px 10px;
+  border: 0.1em solid #D5D5D5;
+  border-radius: 5px;
+}
+
+/* line 79, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
+.settings .actions {
+  margin-top: 15px;
+  column-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+}
+
+/* line 86, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
+.settings .actions button.save {
+  width: 100%;
+  padding: 8px 0;
+  color: #FFFFFF;
+  background: #7477BF;
+  border-radius: 5px;
+  border: 0.1em solid #D5D5D5;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+/* line 97, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
+.settings .actions button.cancel {
+  width: 100%;
+  padding: 8px 0;
+  color: #FFFFFF;
+  background: #999;
   border-radius: 5px;
   border: 0.1em solid #D5D5D5;
   font-weight: 200;
