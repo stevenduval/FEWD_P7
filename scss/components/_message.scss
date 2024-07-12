@@ -1,3 +1,9 @@
+.message {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
 .message legend {
     padding: 0;
     margin-bottom: 0.83em;
@@ -48,7 +54,7 @@ textarea::placeholder {
 }
 
 button[type="submit"] {
-    margin: 15px 0;
+    margin-top: 15px;
     width: 100%;
     padding: 8px 0;
     color: #FFFFFF;

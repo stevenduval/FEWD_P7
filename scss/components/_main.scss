@@ -10,3 +10,134 @@ main section ~ section {
 main section:nth-child(n+4) {  
     border-top: 0.1em solid #D5D5D5;
 }
+
+@media only screen and (min-width: 768px) {
+    header {
+       grid-area: headerComponent;
+    }
+
+    main {
+        grid-area: mainComponent;
+    }
+
+    .tabs {
+        grid-area: tabs;
+    }
+
+    .one {
+        grid-area: trafficComponent;
+    }
+
+   .two {
+        grid-area: dailyTrafficComponent;
+    }
+
+   .three {
+        grid-area: mobileUsersComponent;
+    }
+
+    .social {
+        grid-area: socialComponent;
+        grid-template-columns: 1fr 1fr 1fr !important;
+        column-gap: 10px;
+    }
+
+    .social h2 {
+        grid-column: span 3;
+    }
+
+    .members {
+        grid-area: membersComponent;
+    }
+
+    .members .card {
+        grid-template-columns: min-content max-content 1fr !important;
+        align-items: center;
+        column-gap: 10px;
+    }
+    .members .card .info {
+        text-align: left;
+    }
+    .members .card .date {
+        text-align: right;
+    }
+
+    .activity {
+        grid-area: activityComponent;
+    }
+
+    .activity .card {
+        grid-template-columns: min-content max-content 1fr !important;
+        align-items: center;
+        column-gap: 10px;
+    }
+
+    .activity .card .info-section1 {
+        text-align: left;
+    }
+
+    .activity .card .info-section2 {
+        text-align: right;
+        display: block;
+    }
+
+    .message {
+        grid-area: messageComponent;
+    }
+    
+    .settings {
+        grid-area: settingsComponent;
+    }
+
+    .settings .toggles {
+        justify-content: flex-start !important;
+        column-gap: 40px;
+    }
+
+
+    .wrapper {
+        grid-template-columns: 70px 1fr;
+        grid-template-areas: 
+            "headerComponent headerComponent"
+            "navComponent mainComponent"
+            ;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "tabs tabs"
+        "trafficComponent trafficComponent"
+        "dailyTrafficComponent mobileUsersComponent"
+        "socialComponent socialComponent"
+        "membersComponent membersComponent"
+        "activityComponent activityComponent"
+        "messageComponent messageComponent"
+        "settingsComponent settingsComponent"
+        ;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    main {
+        grid-template-areas: 
+        "tabs tabs"
+        "trafficComponent trafficComponent"
+        "dailyTrafficComponent mobileUsersComponent"
+        "socialComponent socialComponent"
+        "membersComponent membersComponent"
+        "activityComponent activityComponent"
+        "messageComponent messageComponent"
+        "settingsComponent settingsComponent"
+        ;
+
+        grid-template-areas: 
+        "tabs tabs"
+        "trafficComponent trafficComponent"
+        "dailyTrafficComponent mobileUsersComponent"
+        "socialComponent socialComponent"
+        "membersComponent activityComponent"
+        "messageComponent settingsComponent"
+        ;
+    }
+  }

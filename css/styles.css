@@ -125,8 +125,29 @@ nav li {
 
 /* line 26, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_leftNav.scss */
 nav li img {
-  width: auto;
+  width: 100%;
   height: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 32, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_leftNav.scss */
+  nav {
+    grid-area: navComponent;
+  }
+  /* line 36, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_leftNav.scss */
+  nav {
+    flex-direction: column;
+    height: 100%;
+    padding: 0 20px;
+    justify-content: start;
+  }
+  /* line 43, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_leftNav.scss */
+  nav ul {
+    margin-top: 15px;
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+  }
 }
 
 /* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
@@ -143,6 +164,111 @@ main section ~ section {
 /* line 10, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
 main section:nth-child(n+4) {
   border-top: 0.1em solid #D5D5D5;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 15, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
+  header {
+    grid-area: headerComponent;
+  }
+  /* line 19, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
+  main {
+    grid-area: mainComponent;
+  }
+  /* line 23, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
+  .tabs {
+    grid-area: tabs;
+  }
+  /* line 27, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
+  .one {
+    grid-area: trafficComponent;
+  }
+  /* line 31, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
+  .two {
+    grid-area: dailyTrafficComponent;
+  }
+  /* line 35, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
+  .three {
+    grid-area: mobileUsersComponent;
+  }
+  /* line 39, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
+  .social {
+    grid-area: socialComponent;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    column-gap: 10px;
+  }
+  /* line 45, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
+  .social h2 {
+    grid-column: span 3;
+  }
+  /* line 49, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
+  .members {
+    grid-area: membersComponent;
+  }
+  /* line 53, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
+  .members .card {
+    grid-template-columns: min-content max-content 1fr !important;
+    align-items: center;
+    column-gap: 10px;
+  }
+  /* line 58, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
+  .members .card .info {
+    text-align: left;
+  }
+  /* line 61, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
+  .members .card .date {
+    text-align: right;
+  }
+  /* line 65, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
+  .activity {
+    grid-area: activityComponent;
+  }
+  /* line 69, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
+  .activity .card {
+    grid-template-columns: min-content max-content 1fr !important;
+    align-items: center;
+    column-gap: 10px;
+  }
+  /* line 75, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
+  .activity .card .info-section1 {
+    text-align: left;
+  }
+  /* line 79, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
+  .activity .card .info-section2 {
+    text-align: right;
+    display: block;
+  }
+  /* line 84, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
+  .message {
+    grid-area: messageComponent;
+  }
+  /* line 88, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
+  .settings {
+    grid-area: settingsComponent;
+  }
+  /* line 92, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
+  .settings .toggles {
+    justify-content: flex-start !important;
+    column-gap: 40px;
+  }
+  /* line 98, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
+  .wrapper {
+    grid-template-columns: 70px 1fr;
+    grid-template-areas: "headerComponent headerComponent" "navComponent mainComponent";
+  }
+  /* line 106, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
+  main {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "tabs tabs" "trafficComponent trafficComponent" "dailyTrafficComponent mobileUsersComponent" "socialComponent socialComponent" "membersComponent membersComponent" "activityComponent activityComponent" "messageComponent messageComponent" "settingsComponent settingsComponent";
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  /* line 122, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
+  main {
+    grid-template-areas: "tabs tabs" "trafficComponent trafficComponent" "dailyTrafficComponent mobileUsersComponent" "socialComponent socialComponent" "membersComponent membersComponent" "activityComponent activityComponent" "messageComponent messageComponent" "settingsComponent settingsComponent";
+    grid-template-areas: "tabs tabs" "trafficComponent trafficComponent" "dailyTrafficComponent mobileUsersComponent" "socialComponent socialComponent" "membersComponent activityComponent" "messageComponent settingsComponent";
+  }
 }
 
 /* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_tabs.scss */
@@ -307,7 +433,7 @@ canvas {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 15px 10px;
+  padding: 15px 0px;
 }
 
 /* line 14, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_activity.scss */
@@ -354,13 +480,20 @@ canvas {
 }
 
 /* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
+.message {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+/* line 7, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
 .message legend {
   padding: 0;
   margin-bottom: 0.83em;
   font-weight: 700;
 }
 
-/* line 7, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
+/* line 13, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
 .message label {
   border: 0;
   clip: rect(0 0 0 0);
@@ -372,7 +505,7 @@ canvas {
   width: 1px;
 }
 
-/* line 18, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
+/* line 24, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
 .message fieldset {
   border: none;
   display: flex;
@@ -382,7 +515,7 @@ canvas {
   margin: 0.83em 0 0;
 }
 
-/* line 27, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
+/* line 33, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
 .message input {
   margin-bottom: 15px;
   padding: 10px 10px;
@@ -392,7 +525,7 @@ canvas {
   flex: 0 100%;
 }
 
-/* line 36, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
+/* line 42, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
 .message textarea {
   background: #F7F7F7;
   border: 0.1em solid #D5D5D5;
@@ -402,15 +535,15 @@ canvas {
   padding: 5px 10px;
 }
 
-/* line 45, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
+/* line 51, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
 input::placeholder,
 textarea::placeholder {
   color: #BDBDBD;
 }
 
-/* line 50, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
+/* line 56, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
 button[type="submit"] {
-  margin: 15px 0;
+  margin-top: 15px;
   width: 100%;
   padding: 8px 0;
   color: #FFFFFF;
@@ -444,7 +577,7 @@ button[type="submit"] {
 /* line 18, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
 .settings .toggles input {
   cursor: pointer;
-  margin: 1rem auto;
+  margin: 0.83rem auto;
   position: relative;
   width: 85px;
   height: 30px;

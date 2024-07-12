@@ -1,41 +1,45 @@
 // default options for charts
 let options = {
-    default: {
-        plugins: {
-            title: {
-                display: false,
-            },
-            legend: {
-                display: false,
-            }
+  default: {
+    plugins: {
+      title: {
+        display: false,
+      },
+      legend: {
+        display: false,
+      },
+    },
+  },
+  legendRight: {
+    plugins: {
+      legend: {
+        display: true,
+        position: 'right',
+        labels: {
+          font: {
+            weight: 700,
+          },
         },
+      },
     },
-    legendRight : {
-        plugins: {
-            legend: {
-                display: true,
-                position: 'right',
-            }
-        }
-    },
+  },
+  scales: {
     scales: {
-        scales: {
-            y: {
-                beginAtZero: true,
-                ticks: {
-                    autoSkip: false,
-                },
-            },
+      y: {
+        beginAtZero: true,
+        ticks: {
+          autoSkip: false,
         },
+      },
     },
+  },
+  elements: {
     elements: {
-        elements: {
-            arc: {
-                borderWidth: 0
-            }
-        },
-
+      arc: {
+        borderWidth: 0,
+      },
     },
+  },
 };
 
 // line chart
@@ -57,50 +61,50 @@ const trafficLineChart = new Chart(document.getElementById('traffic'), {
 
 // bar chart 
 const dailyTrafficBarChart = new Chart(document.getElementById('daily'), {
-    type: 'bar',
-    data: {
-      labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
-      datasets: [
-        {
-          data: [75, 115, 175, 135, 225, 200, 100],
-          backgroundColor: "#7477BF",
-          borderColor: '#686BAC',
-          fill: true,
-        },
-      ]
-    },
-    options: { ...options.default, ...options.scales },
-  });
+  type: 'bar',
+  data: {
+    labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+    datasets: [
+      {
+        data: [75, 115, 175, 135, 225, 200, 100],
+        backgroundColor: "#7477BF",
+        borderColor: '#686BAC',
+        fill: true,
+      },
+    ]
+  },
+  options: { ...options.default, ...options.scales },
+});
 
 // doughnut chart
-  const mobileUsersChart = new Chart(document.getElementById('mobile'), {
-    type: 'doughnut',
-    data: {
-      labels: ['Desktop', 'Tablet', 'Phones'],
-      datasets: [ { data: [66, 16, 18], backgroundColor: [ '#7477BF', '#81C98F','#51B6C8'] } ]
-    },
-    options: { ...options.default, ...options.legendRight, ...options.elements },
-  });
+const mobileUsersChart = new Chart(document.getElementById('mobile'), {
+  type: 'doughnut',
+  data: {
+    labels: ['Desktop', 'Tablet', 'Phones'],
+    datasets: [{ data: [66, 16, 18], backgroundColor: ['#7477BF', '#81C98F', '#51B6C8'] }]
+  },
+  options: { ...options.default, ...options.legendRight, ...options.elements, aspectRatio: 2 },
+});
 
 // generating random data
 const generateRandom = ({ min, max, count }) => {
-    let data = [];
-    for (let i = 0; i < count; ++i) {
-        data.push(Math. random() * (max - min) + min);
-    }
-    return data;
+  let data = [];
+  for (let i = 0; i < count; ++i) {
+    data.push(Math.random() * (max - min) + min);
+  }
+  return data;
 }
 
-const generateData = () =>  generateRandom({ count: 11, min: 0, max: 2500 });
+const generateData = () => generateRandom({ count: 11, min: 0, max: 2500 });
 
 // event listeners for 
-document.querySelector('section.reports').addEventListener('click', ({target : elemClicked}) => { 
-    if (elemClicked.tagName === 'BUTTON') {
-        document.querySelector('button.active').removeAttribute('class');
-        trafficLineChart.data.datasets.forEach(dataset => {
-            dataset.data = generateData();
-          });
-        trafficLineChart.update();
-        elemClicked.classList.add('active');
-    }
-} );
+document.querySelector('section.reports').addEventListener('click', ({ target: elemClicked }) => {
+  if (elemClicked.tagName === 'BUTTON') {
+    document.querySelector('button.active').removeAttribute('class');
+    trafficLineChart.data.datasets.forEach(dataset => {
+      dataset.data = generateData();
+    });
+    trafficLineChart.update();
+    elemClicked.classList.add('active');
+  }
+});
