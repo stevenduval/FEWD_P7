@@ -632,9 +632,10 @@ canvas {
   flex: 0 100%;
   height: 46px;
   box-sizing: border-box;
+  font-size: 0.85rem;
 }
 
-/* line 48, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
+/* line 49, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
 .message textarea {
   margin-top: 15px;
   background: #F7F7F7;
@@ -644,16 +645,16 @@ canvas {
   height: 110px;
   padding: 5px 10px;
   box-sizing: border-box;
-  font-size: inherit;
+  font-size: 0.85rem;
 }
 
-/* line 60, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
+/* line 61, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
 input::placeholder,
 textarea::placeholder {
   color: #BDBDBD;
 }
 
-/* line 65, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
+/* line 66, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
 button[type="submit"] {
   margin-top: 15px;
   width: 100%;
@@ -666,7 +667,7 @@ button[type="submit"] {
   cursor: pointer;
 }
 
-/* line 77, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
+/* line 78, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
 .message .overlay {
   position: absolute;
   display: none;
@@ -683,7 +684,7 @@ button[type="submit"] {
   justify-content: center;
 }
 
-/* line 93, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
+/* line 94, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
 .message .error {
   color: red;
   font-weight: 400;
@@ -692,7 +693,7 @@ button[type="submit"] {
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 101, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
+  /* line 102, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
   .message {
     grid-area: messageComponent;
   }
