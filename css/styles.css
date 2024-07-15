@@ -201,7 +201,7 @@ main section:nth-child(n+4) {
   main {
     grid-area: mainComponent;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "tabs tabs" "alertComponent alertComponent" "mainReportComponent mainReportComponen" "dailyReportComponent mobileReportComponent" "socialComponent socialComponent" "membersComponent membersComponent" "activityComponent activityComponent" "messageComponent messageComponent" "settingsComponent settingsComponent";
+    grid-template-areas: "tabs tabs" "alertComponent alertComponent" "mainReportComponent mainReportComponent" "dailyReportComponent mobileReportComponent" "socialComponent socialComponent" "membersComponent membersComponent" "activityComponent activityComponent" "messageComponent messageComponent" "settingsComponent settingsComponent";
   }
 }
 
