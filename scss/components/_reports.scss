@@ -1,7 +1,59 @@
-.reports  h2 {
+.reports h2 {
     margin-bottom: 0;
 }
 
 canvas {
     margin: 20px 0;
+    width: 100% !important;
+    height: auto !important;
+}
+
+.reports.main {
+    margin-top: 15px;
+}
+
+.reports.main ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.reports.main ul li {
+    padding: 2px 12px;
+    font-size: 14px;
+}
+
+.reports.main ul li:hover {
+    cursor: pointer;
+}
+
+.reports.main li.active {
+    background: #81C98F;
+    border-radius: 20px;
+    color: white;
+}
+
+@media only screen and (min-width: 768px) {
+    .reports.main {
+        grid-area: mainReportComponent;
+    }
+
+    .reports.daily {
+        grid-area: dailyReportComponent;
+    }
+
+    .reports.mobile {
+        grid-area: mobileReportComponent;
+        border-left: 0.1rem solid #D5D5D5;
+    }
+
+    .reports.main .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: end;
+    }
 }

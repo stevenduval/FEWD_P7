@@ -1,5 +1,5 @@
-.members .card:nth-child(n+3) {  
-    border-top: 0.1em solid #D5D5D5;
+.members .card:nth-child(n+3) {
+    border-top: 0.1rem solid #D5D5D5;
 }
 
 .members .card {
@@ -24,25 +24,46 @@
     width: auto;
 }
 
-.members .info {
+.members .info-section1 {
     padding-top: 5px;
 }
 
-.members .info h3 {
+.members .info-section1 h3 {
     font-weight: 400;
 }
 
-.members .info a {
+.members .info-section1 a {
     text-decoration: none;
     display: block;
     color: #777AC1;
 }
 
-.members .info h3,
-.members .info a,
-.members .info p,
-.members .date p {
+.members .info-section1 h3,
+.members .info-section1 a,
+.members .info-section1 p,
+.members .info-section2 p {
     margin: 0;
     line-height: 1.15;
-    font-size: 0.75em;
+    font-size: 0.75rem;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .members {
+        grid-area: membersComponent;
+    }
+
+    .members .card {
+        grid-template-columns: min-content max-content 1fr !important;
+        align-items: center;
+        column-gap: 10px;
+    }
+
+    .members .card .info-section1 {
+        text-align: left;
+    }
+
+    .members .card .info-section2 {
+        text-align: right;
+    }
 }

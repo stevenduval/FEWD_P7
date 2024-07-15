@@ -10,22 +10,8 @@ body {
 }
 
 /* line 10, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/base/_base.scss */
-h2, legend {
-  font-size: 0.85em;
-}
-
-/* line 14, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/base/_base.scss */
-button {
-  background: none;
-  border: none;
-  padding: 3px 10px;
-}
-
-/* line 20, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/base/_base.scss */
-button.active {
-  background: #81C98F;
-  border-radius: 20px;
-  color: white;
+h2 {
+  font-size: 0.95rem;
 }
 
 /* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_header.scss */
@@ -56,33 +42,63 @@ header strong {
   align-items: center;
   margin-left: auto;
   height: 100%;
-  border-right: 0.1em solid #8E92B7;
+  border-right: 0.1rem solid #8E92B7;
   padding: 5px 10px;
   box-sizing: border-box;
+  position: relative;
 }
 
-/* line 30, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_header.scss */
+/* line 31, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_header.scss */
 .notification img {
   width: auto;
   height: 100%;
   box-sizing: border-box;
   min-height: 0;
+  transition: all .5s;
 }
 
-/* line 37, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_header.scss */
+/* line 39, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_header.scss */
+.notification img:hover {
+  cursor: pointer;
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  20% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+/* line 50, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_header.scss */
+.notification .new {
+  content: '';
+  border-radius: 100%;
+  background: #90EE90;
+  position: absolute;
+  top: 1px;
+  right: 9px;
+  height: 4px;
+  width: 4px;
+}
+
+/* line 61, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_header.scss */
 .profile {
   display: flex;
   align-items: center;
   height: 100%;
 }
 
-/* line 43, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_header.scss */
+/* line 67, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_header.scss */
 .profile p {
   font-size: 0.75rem;
   font-weight: 200;
 }
 
-/* line 48, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_header.scss */
+/* line 72, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_header.scss */
 .profile img {
   border-radius: 50%;
   width: auto;
@@ -90,9 +106,16 @@ header strong {
   margin: 0 10px;
 }
 
-/* line 55, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_header.scss */
+/* line 79, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_header.scss */
 header h1 {
   font-weight: 200;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 84, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_header.scss */
+  header {
+    grid-area: headerComponent;
+  }
 }
 
 /* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_leftNav.scss */
@@ -151,123 +174,41 @@ nav li img {
 }
 
 /* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
-.wrapper, main {
+.wrapper,
+main {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
 }
 
-/* line 6, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
-main section ~ section {
-  padding: 0 15px;
+/* line 7, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
+main section:nth-child(n+2) {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-/* line 10, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
+/* line 12, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
 main section:nth-child(n+4) {
-  border-top: 0.1em solid #D5D5D5;
+  border-top: 0.1rem solid #D5D5D5;
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 15, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
-  header {
-    grid-area: headerComponent;
-  }
-  /* line 19, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
-  main {
-    grid-area: mainComponent;
-  }
-  /* line 23, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
-  .tabs {
-    grid-area: tabs;
-  }
-  /* line 27, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
-  .one {
-    grid-area: trafficComponent;
-  }
-  /* line 31, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
-  .two {
-    grid-area: dailyTrafficComponent;
-  }
-  /* line 35, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
-  .three {
-    grid-area: mobileUsersComponent;
-  }
-  /* line 39, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
-  .social {
-    grid-area: socialComponent;
-    grid-template-columns: 1fr 1fr 1fr !important;
-    column-gap: 10px;
-  }
-  /* line 45, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
-  .social h2 {
-    grid-column: span 3;
-  }
-  /* line 49, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
-  .members {
-    grid-area: membersComponent;
-  }
-  /* line 53, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
-  .members .card {
-    grid-template-columns: min-content max-content 1fr !important;
-    align-items: center;
-    column-gap: 10px;
-  }
-  /* line 58, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
-  .members .card .info {
-    text-align: left;
-  }
-  /* line 61, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
-  .members .card .date {
-    text-align: right;
-  }
-  /* line 65, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
-  .activity {
-    grid-area: activityComponent;
-  }
-  /* line 69, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
-  .activity .card {
-    grid-template-columns: min-content max-content 1fr !important;
-    align-items: center;
-    column-gap: 10px;
-  }
-  /* line 75, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
-  .activity .card .info-section1 {
-    text-align: left;
-  }
-  /* line 79, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
-  .activity .card .info-section2 {
-    text-align: right;
-    display: block;
-  }
-  /* line 84, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
-  .message {
-    grid-area: messageComponent;
-  }
-  /* line 88, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
-  .settings {
-    grid-area: settingsComponent;
-  }
-  /* line 92, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
-  .settings .toggles {
-    justify-content: flex-start !important;
-    column-gap: 40px;
-  }
-  /* line 98, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
+  /* line 17, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
   .wrapper {
     grid-template-columns: 70px 1fr;
     grid-template-areas: "headerComponent headerComponent" "navComponent mainComponent";
   }
-  /* line 106, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
+  /* line 25, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
   main {
+    grid-area: mainComponent;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "tabs tabs" "trafficComponent trafficComponent" "dailyTrafficComponent mobileUsersComponent" "socialComponent socialComponent" "membersComponent membersComponent" "activityComponent activityComponent" "messageComponent messageComponent" "settingsComponent settingsComponent";
+    grid-template-areas: "tabs tabs" "alertComponent alertComponent" "mainReportComponent mainReportComponen" "dailyReportComponent mobileReportComponent" "socialComponent socialComponent" "membersComponent membersComponent" "activityComponent activityComponent" "messageComponent messageComponent" "settingsComponent settingsComponent";
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  /* line 122, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
+  /* line 43, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
   main {
-    grid-template-areas: "tabs tabs" "trafficComponent trafficComponent" "dailyTrafficComponent mobileUsersComponent" "socialComponent socialComponent" "membersComponent membersComponent" "activityComponent activityComponent" "messageComponent messageComponent" "settingsComponent settingsComponent";
-    grid-template-areas: "tabs tabs" "trafficComponent trafficComponent" "dailyTrafficComponent mobileUsersComponent" "socialComponent socialComponent" "membersComponent activityComponent" "messageComponent settingsComponent";
+    grid-template-areas: "tabs tabs" "alertComponent alertComponent" "mainReportComponent mainReportComponent" "dailyReportComponent mobileReportComponent" "socialComponent socialComponent" "membersComponent activityComponent" "messageComponent settingsComponent";
   }
 }
 
@@ -275,26 +216,64 @@ main section:nth-child(n+4) {
 .tabs {
   background: #F7F7F7;
   display: flex;
-  border-bottom: 0.1em solid #ccc;
+  border-bottom: 0.1rem solid #ccc;
   position: relative;
   z-index: -1;
   width: 100%;
-  top: -0.1em;
+  top: -0.1rem;
 }
 
 /* line 11, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_tabs.scss */
 .tabs .item {
   background: white;
-  border-right: 0.1em solid #D5D5D5;
+  border-right: 0.1rem solid #D5D5D5;
   padding: 0 15px;
   position: relative;
   z-index: 1;
-  top: 0.1em;
+  top: 0.1rem;
 }
 
 /* line 20, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_tabs.scss */
 .tabs .item h2 {
-  font-size: 1em;
+  font-size: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 25, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_tabs.scss */
+  .tabs {
+    grid-area: tabs;
+  }
+}
+
+/* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_alerts.scss */
+.alerts > .container {
+  margin-top: 12px;
+  background: #7477BF;
+  color: #FFFFFF;
+  font-weight: 200;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 5px;
+  padding: 6px 15px;
+  font-size: 0.875rem;
+}
+
+/* line 14, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_alerts.scss */
+.alerts strong {
+  font-weight: 400;
+}
+
+/* line 18, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_alerts.scss */
+.alerts .action {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 24, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_alerts.scss */
+  .alerts {
+    grid-area: alertComponent;
+  }
 }
 
 /* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_reports.scss */
@@ -305,6 +284,64 @@ main section:nth-child(n+4) {
 /* line 5, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_reports.scss */
 canvas {
   margin: 20px 0;
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* line 11, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_reports.scss */
+.reports.main {
+  margin-top: 15px;
+}
+
+/* line 15, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_reports.scss */
+.reports.main ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+/* line 24, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_reports.scss */
+.reports.main ul li {
+  padding: 2px 12px;
+  font-size: 14px;
+}
+
+/* line 29, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_reports.scss */
+.reports.main ul li:hover {
+  cursor: pointer;
+}
+
+/* line 33, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_reports.scss */
+.reports.main li.active {
+  background: #81C98F;
+  border-radius: 20px;
+  color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 40, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_reports.scss */
+  .reports.main {
+    grid-area: mainReportComponent;
+  }
+  /* line 44, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_reports.scss */
+  .reports.daily {
+    grid-area: dailyReportComponent;
+  }
+  /* line 48, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_reports.scss */
+  .reports.mobile {
+    grid-area: mobileReportComponent;
+    border-left: 0.1rem solid #D5D5D5;
+  }
+  /* line 53, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_reports.scss */
+  .reports.main .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+  }
 }
 
 /* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_social.scss */
@@ -317,7 +354,7 @@ canvas {
 .social .card {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
-  border: 0.1em solid #D5D5D5;
+  border: 0.1rem solid #D5D5D5;
   background: #F7F7F7;
   border-radius: 5px;
   padding: 15px 20px;
@@ -327,45 +364,61 @@ canvas {
 
 /* line 17, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_social.scss */
 .social .icon {
+  color: white;
   background: #7477BF;
   border-radius: 50%;
   display: flex;
   align-self: center;
   height: 60px;
   width: 60px;
+  padding: 15px;
+  box-sizing: border-box;
 }
 
-/* line 26, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_social.scss */
+/* line 29, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_social.scss */
 .social .icon img {
   padding: 15px;
 }
 
-/* line 30, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_social.scss */
+/* line 33, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_social.scss */
 .social .info {
   display: flex;
   flex-direction: column;
 }
 
-/* line 34, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_social.scss */
+/* line 38, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_social.scss */
 .social .info h3 {
   color: #6366B7;
   font-weight: 600;
   margin: 0;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
-/* line 41, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_social.scss */
+/* line 45, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_social.scss */
 .social .info p {
   margin: 0;
   color: #777777;
-  font-size: 2.5em;
+  font-size: 2.5rem;
   line-height: 1;
   font-weight: 200;
 }
 
+@media only screen and (min-width: 768px) {
+  /* line 54, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_social.scss */
+  .social {
+    grid-area: socialComponent;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    column-gap: 10px;
+  }
+  /* line 60, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_social.scss */
+  .social h2 {
+    grid-column: span 3;
+  }
+}
+
 /* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
 .members .card:nth-child(n+3) {
-  border-top: 0.1em solid #D5D5D5;
+  border-top: 0.1rem solid #D5D5D5;
 }
 
 /* line 5, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
@@ -395,30 +448,51 @@ canvas {
 }
 
 /* line 27, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
-.members .info {
+.members .info-section1 {
   padding-top: 5px;
 }
 
 /* line 31, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
-.members .info h3 {
+.members .info-section1 h3 {
   font-weight: 400;
 }
 
 /* line 35, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
-.members .info a {
+.members .info-section1 a {
   text-decoration: none;
   display: block;
   color: #777AC1;
 }
 
 /* line 41, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
-.members .info h3,
-.members .info a,
-.members .info p,
-.members .date p {
+.members .info-section1 h3,
+.members .info-section1 a,
+.members .info-section1 p,
+.members .info-section2 p {
   margin: 0;
   line-height: 1.15;
-  font-size: 0.75em;
+  font-size: 0.75rem;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 52, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
+  .members {
+    grid-area: membersComponent;
+  }
+  /* line 56, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
+  .members .card {
+    grid-template-columns: min-content max-content 1fr !important;
+    align-items: center;
+    column-gap: 10px;
+  }
+  /* line 62, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
+  .members .card .info-section1 {
+    text-align: left;
+  }
+  /* line 66, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
+  .members .card .info-section2 {
+    text-align: right;
+  }
 }
 
 /* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_activity.scss */
@@ -471,7 +545,7 @@ canvas {
 .activity .info-section2 p {
   margin: 0;
   line-height: 1.15;
-  font-size: 0.75em;
+  font-size: 0.75rem;
 }
 
 /* line 46, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_activity.scss */
@@ -479,21 +553,54 @@ canvas {
   display: none;
 }
 
+@media only screen and (min-width: 768px) {
+  /* line 51, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_activity.scss */
+  .activity {
+    grid-area: activityComponent;
+  }
+  /* line 55, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_activity.scss */
+  .activity .card {
+    grid-template-columns: min-content max-content 1fr !important;
+    align-items: center;
+    column-gap: 10px;
+  }
+  /* line 61, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_activity.scss */
+  .activity .card .info-section1 {
+    text-align: left;
+  }
+  /* line 65, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_activity.scss */
+  .activity .card .info-section2 {
+    text-align: right;
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  /* line 72, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_activity.scss */
+  .activity {
+    border-left: 0.1rem solid #D5D5D5;
+  }
+}
+
 /* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
 .message {
   display: flex;
   flex-direction: column;
-  margin-bottom: 15px;
+  padding-bottom: 15px;
+  justify-content: space-between;
+  align-items: stretch;
+  position: relative;
 }
 
-/* line 7, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
+/* line 10, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
 .message legend {
   padding: 0;
-  margin-bottom: 0.83em;
+  margin-bottom: 0.83rem;
   font-weight: 700;
+  font-size: 0.95rem;
 }
 
-/* line 13, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
+/* line 17, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
 .message label {
   border: 0;
   clip: rect(0 0 0 0);
@@ -505,43 +612,48 @@ canvas {
   width: 1px;
 }
 
-/* line 24, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
+/* line 28, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
 .message fieldset {
+  font-size: 0.95rem;
   border: none;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   padding: 0;
-  margin: 0.83em 0 0;
+  margin: 0.83rem 0 0;
 }
 
-/* line 33, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
+/* line 38, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
 .message input {
-  margin-bottom: 15px;
   padding: 10px 10px;
   background: #F7F7F7;
-  border: 0.1em solid #D5D5D5;
+  border: 0.1rem solid #D5D5D5;
   border-radius: 5px;
   flex: 0 100%;
+  height: 46px;
+  box-sizing: border-box;
 }
 
-/* line 42, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
+/* line 48, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
 .message textarea {
+  margin-top: 15px;
   background: #F7F7F7;
-  border: 0.1em solid #D5D5D5;
+  border: 0.1rem solid #D5D5D5;
   border-radius: 5px;
   flex: 0 100%;
-  height: 100px;
+  height: 110px;
   padding: 5px 10px;
+  box-sizing: border-box;
+  font-size: inherit;
 }
 
-/* line 51, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
+/* line 60, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
 input::placeholder,
 textarea::placeholder {
   color: #BDBDBD;
 }
 
-/* line 56, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
+/* line 65, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
 button[type="submit"] {
   margin-top: 15px;
   width: 100%;
@@ -549,35 +661,69 @@ button[type="submit"] {
   color: #FFFFFF;
   background: #7477BF;
   border-radius: 5px;
-  border: 0.1em solid #D5D5D5;
+  border: 0.1rem solid #D5D5D5;
   font-weight: 200;
   cursor: pointer;
+}
+
+/* line 77, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
+.message .overlay {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  z-index: 2;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 93, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
+.message .error {
+  color: red;
+  font-weight: 400;
+  margin-left: auto;
+  font-size: 0.75rem;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 101, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
+  .message {
+    grid-area: messageComponent;
+  }
 }
 
 /* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
 .settings {
   display: flex;
   flex-direction: column;
-  margin-bottom: 15px;
+  padding-bottom: 15px;
+  justify-content: space-between;
+  align-items: stretch;
 }
 
-/* line 7, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
+/* line 9, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
 .settings .toggles {
   display: grid;
   align-items: center;
-  grid-template: repeat(2, fit-content(300px))/repeat(2, fit-content(300px));
+  grid-template-columns: repeat(2, fit-content(300px));
   justify-content: space-between;
 }
 
-/* line 14, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
+/* line 16, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
 .settings .toggles label {
-  font-size: 0.85em;
+  font-size: 0.85rem;
 }
 
-/* line 18, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
+/* line 20, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
 .settings .toggles input {
   cursor: pointer;
-  margin: 0.83rem auto;
+  margin: 13px auto;
   position: relative;
   width: 85px;
   height: 30px;
@@ -589,7 +735,7 @@ button[type="submit"] {
   border: 0.15em solid #c0c0c0;
 }
 
-/* line 32, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
+/* line 34, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
 .settings .toggles input::after {
   content: '';
   position: absolute;
@@ -601,49 +747,49 @@ button[type="submit"] {
   width: 1rem;
   background-color: white;
   transition: left .3s;
-  border: 0.15em solid #c0c0c0;
+  border: 0.15rem solid #c0c0c0;
 }
 
-/* line 45, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
+/* line 48, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
 .settings .toggles input:checked {
   background-color: #7477BF;
 }
 
-/* line 49, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
+/* line 52, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
 .settings .toggles input:checked::after {
   left: 82%;
 }
 
-/* line 53, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
+/* line 56, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
 .settings .toggles input::before {
   content: 'OFF';
   position: absolute;
-  top: 0.2em;
+  top: 0.2rem;
   right: 10px;
   color: #fff;
   font-weight: 200;
 }
 
-/* line 62, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
+/* line 65, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
 .settings .toggles input:checked::before {
   content: 'ON';
   position: absolute;
-  top: 0.2em;
+  top: 0.2rem;
   left: 10px;
   color: #fff;
   font-weight: 200;
 }
 
-/* line 71, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
+/* line 74, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
 .settings select {
   margin-top: 15px;
   background: #F7F7F7;
   padding: 10px 10px;
-  border: 0.1em solid #D5D5D5;
+  border: 0.1rem solid #D5D5D5;
   border-radius: 5px;
 }
 
-/* line 79, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
+/* line 82, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
 .settings .actions {
   margin-top: 15px;
   column-gap: 10px;
@@ -651,28 +797,52 @@ button[type="submit"] {
   display: grid;
 }
 
-/* line 86, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
+/* line 89, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
 .settings .actions button.save {
   width: 100%;
   padding: 8px 0;
   color: #FFFFFF;
   background: #7477BF;
   border-radius: 5px;
-  border: 0.1em solid #D5D5D5;
+  border: 0.1rem solid #D5D5D5;
   font-weight: 200;
   cursor: pointer;
 }
 
-/* line 97, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
+/* line 100, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
 .settings .actions button.cancel {
   width: 100%;
   padding: 8px 0;
   color: #FFFFFF;
   background: #999;
   border-radius: 5px;
-  border: 0.1em solid #D5D5D5;
+  border: 0.1rem solid #D5D5D5;
   font-weight: 200;
   cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 113, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
+  .settings {
+    grid-area: settingsComponent;
+  }
+  /* line 117, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
+  .settings .toggles {
+    justify-content: flex-start;
+    column-gap: 40px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  /* line 124, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
+  .settings {
+    border-left: 0.1rem solid #D5D5D5;
+  }
+  /* line 128, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
+  .settings select {
+    height: 45px;
+    box-sizing: border-box;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

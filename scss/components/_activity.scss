@@ -1,4 +1,4 @@
-.activity .card:nth-child(n+3) {  
+.activity .card:nth-child(n+3) {
     border-top: 0.1em solid #D5D5D5;
 }
 
@@ -40,9 +40,36 @@
 .activity .info-section2 p {
     margin: 0;
     line-height: 1.15;
-    font-size: 0.75em;
+    font-size: 0.75rem;
 }
 
 .activity .info-section2 {
     display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .activity {
+        grid-area: activityComponent;
+    }
+
+    .activity .card {
+        grid-template-columns: min-content max-content 1fr !important;
+        align-items: center;
+        column-gap: 10px;
+    }
+
+    .activity .card .info-section1 {
+        text-align: left;
+    }
+
+    .activity .card .info-section2 {
+        text-align: right;
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .activity {
+        border-left: 0.1rem solid #D5D5D5;
+    }
 }

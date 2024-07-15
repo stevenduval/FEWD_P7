@@ -95,16 +95,47 @@ const generateRandom = ({ min, max, count }) => {
   return data;
 }
 
-const generateData = () => generateRandom({ count: 11, min: 0, max: 2500 });
-
-// event listeners for 
+// event listeners to switch traffic report
 document.querySelector('section.reports').addEventListener('click', ({ target: elemClicked }) => {
-  if (elemClicked.tagName === 'BUTTON') {
-    document.querySelector('button.active').removeAttribute('class');
+  if (elemClicked.tagName === 'LI') {
+    document.querySelector('li.active').removeAttribute('class');
     trafficLineChart.data.datasets.forEach(dataset => {
-      dataset.data = generateData();
+      dataset.data = generateRandom({ count: 11, min: 0, max: 2500 });
     });
     trafficLineChart.update();
     elemClicked.classList.add('active');
+  }
+});
+
+// remove alert bar from screen
+document.querySelector('.alerts').addEventListener('click', ({ target: elemClicked }) => {
+  if (elemClicked.className === 'action') {
+    elemClicked.parentNode.remove();
+  }
+});
+
+// on message submit
+document.querySelector('.message').addEventListener('click', (e) => {
+  if (e.target.type === "submit") {
+    // prevent form from being truly submitted
+    e.preventDefault();
+    // get values of fields
+    const usernameVal = document.getElementById('user').value;
+    const messageVal = document.getElementById('message').value;
+      // check if either field is empty
+    if (!usernameVal || !messageVal) {
+      // get fields to display error messages in
+      const userError = document.querySelector('#user ~ div.error');
+      const messageError = document.querySelector('#message ~ div.error');
+      // set error messages
+      userError.textContent = (!usernameVal) ? 'please select a user' : '';
+      messageError.textContent = (!messageVal) ? 'please provide a message' : '';
+      // break out of function because one of the fields are empty
+      return false;
+    }
+    // get overlay
+    const overlay = document.querySelector('.overlay');
+    //set overlay display
+    overlay.style.display = 'flex';
   }
 });

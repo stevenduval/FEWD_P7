@@ -1,23 +1,25 @@
 .settings {
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
+    padding-bottom: 15px;
+    justify-content: space-between;
+    align-items: stretch;
 }
 
 .settings .toggles {
     display: grid;
     align-items: center;
-    grid-template: repeat(2, fit-content(300px)) / repeat(2, fit-content(300px));
+    grid-template-columns: repeat(2, fit-content(300px));
     justify-content: space-between;
 }
 
 .settings .toggles label {
-    font-size: 0.85em;
+    font-size: 0.85rem;
 }
 
 .settings .toggles input {
     cursor: pointer;
-    margin: 0.83rem auto;
+    margin: 13px auto;
     position: relative;
     width: 85px;
     height: 30px;
@@ -40,8 +42,9 @@
     width: 1rem;
     background-color: white;
     transition: left .3s;
-    border: 0.15em solid #c0c0c0;
+    border: 0.15rem solid #c0c0c0;
 }
+
 .settings .toggles input:checked {
     background-color: #7477BF;
 }
@@ -53,7 +56,7 @@
 .settings .toggles input::before {
     content: 'OFF';
     position: absolute;
-    top: 0.2em;
+    top: 0.2rem;
     right: 10px;
     color: #fff;
     font-weight: 200;
@@ -62,7 +65,7 @@
 .settings .toggles input:checked::before {
     content: 'ON';
     position: absolute;
-    top: 0.2em;
+    top: 0.2rem;
     left: 10px;
     color: #fff;
     font-weight: 200;
@@ -72,7 +75,7 @@
     margin-top: 15px;
     background: #F7F7F7;
     padding: 10px 10px;
-    border: 0.1em solid #D5D5D5;
+    border: 0.1rem solid #D5D5D5;
     border-radius: 5px;
 }
 
@@ -89,7 +92,7 @@
     color: #FFFFFF;
     background: #7477BF;
     border-radius: 5px;
-    border: 0.1em solid #D5D5D5;
+    border: 0.1rem solid #D5D5D5;
     font-weight: 200;
     cursor: pointer;
 }
@@ -100,7 +103,30 @@
     color: #FFFFFF;
     background: #999;
     border-radius: 5px;
-    border: 0.1em solid #D5D5D5;
+    border: 0.1rem solid #D5D5D5;
     font-weight: 200;
     cursor: pointer;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .settings {
+        grid-area: settingsComponent;
+    }
+
+    .settings .toggles {
+        justify-content: flex-start;
+        column-gap: 40px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .settings {
+        border-left: 0.1rem solid #D5D5D5;
+    }
+
+    .settings select {
+        height: 45px;
+        box-sizing: border-box;
+    }
 }

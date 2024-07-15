@@ -32,18 +32,18 @@ nav li img {
     nav {
         grid-area: navComponent;
     }
-    
+
     nav {
         flex-direction: column;
         height: 100%;
         padding: 0 20px;
         justify-content: start;
     }
-    
+
     nav ul {
         margin-top: 15px;
         flex-direction: column;
         gap: 10px;
         height: auto;
     }
-  }
+}

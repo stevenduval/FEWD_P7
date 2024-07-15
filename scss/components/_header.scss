@@ -22,16 +22,40 @@ header strong {
     align-items: center;
     margin-left: auto;
     height: 100%;
-    border-right: 0.1em solid #8E92B7;
+    border-right: 0.1rem solid #8E92B7;
     padding: 5px 10px;
     box-sizing: border-box;
+    position: relative;
 }
 
 .notification img {
     width: auto;
     height: 100%;
     box-sizing: border-box;
-    min-height: 0;
+    min-height: 0;  
+    transition: all .5s;
+}
+
+.notification img:hover {
+    cursor: pointer;
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+20% { transform: rotate(-90deg); }
+100% { transform: rotate(90deg); }
+}
+
+.notification .new {
+    content: '';
+    border-radius: 100%;
+    background: #90EE90;
+    position: absolute;
+    top: 1px;
+    right: 9px;
+    height: 4px;
+    width: 4px;
 }
 
 .profile {
@@ -54,4 +78,10 @@ header strong {
 
 header h1 {
     font-weight: 200;
+}
+
+@media only screen and (min-width: 768px) {
+    header {
+        grid-area: headerComponent;
+    }
 }
