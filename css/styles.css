@@ -1,849 +1,229 @@
-/* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/base/_base.scss */
-* {
-  font-family: "Martel Sans", sans-serif;
-}
-
-/* line 5, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/base/_base.scss */
-body {
-  margin: 0;
-  padding: 0;
-}
-
-/* line 10, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/base/_base.scss */
-h2 {
-  font-size: 0.95rem;
-}
-
-/* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_header.scss */
-header {
-  display: flex;
-  flex-direction: row;
-  background: #7477BF;
-  padding: 12px;
-  color: #fff;
-  align-items: center;
-  height: 55px;
-  box-sizing: border-box;
-}
-
-/* line 12, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_header.scss */
-header h1 {
-  font-size: 1.25rem;
-}
-
-/* line 16, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_header.scss */
-header strong {
-  font-weight: 500;
-}
-
-/* line 20, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_header.scss */
-.notification {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  height: 100%;
-  border-right: 0.1rem solid #8E92B7;
-  padding: 5px 10px;
-  box-sizing: border-box;
-  position: relative;
-}
-
-/* line 31, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_header.scss */
-.notification img {
-  width: auto;
-  height: 100%;
-  box-sizing: border-box;
-  min-height: 0;
-  transition: all .5s;
-}
-
-/* line 39, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_header.scss */
-.notification img:hover {
-  cursor: pointer;
-  animation: shake 0.5s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes shake {
-  20% {
-    transform: rotate(-90deg);
-  }
-  100% {
-    transform: rotate(90deg);
-  }
-}
-
-/* line 50, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_header.scss */
-.notification .new {
-  content: '';
-  border-radius: 100%;
-  background: #90EE90;
-  position: absolute;
-  top: 1px;
-  right: 9px;
-  height: 4px;
-  width: 4px;
-}
-
-/* line 61, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_header.scss */
-.profile {
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-
-/* line 67, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_header.scss */
-.profile p {
-  font-size: 0.75rem;
-  font-weight: 200;
-}
-
-/* line 72, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_header.scss */
-.profile img {
-  border-radius: 50%;
-  width: auto;
-  height: 100%;
-  margin: 0 10px;
-}
-
-/* line 79, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_header.scss */
-header h1 {
-  font-weight: 200;
-}
-
-@media only screen and (min-width: 768px) {
-  /* line 84, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_header.scss */
-  header {
-    grid-area: headerComponent;
-  }
-}
-
-/* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_leftNav.scss */
-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background: #4D4C72;
-  padding: 10px 40px;
-  height: 50px;
-  box-sizing: border-box;
-}
-
-/* line 12, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_leftNav.scss */
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  height: 100%;
-}
-
-/* line 22, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_leftNav.scss */
-nav li {
-  display: inline-block;
-}
-
-/* line 26, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_leftNav.scss */
-nav li img {
-  width: 100%;
-  height: 100%;
-}
-
-@media only screen and (min-width: 768px) {
-  /* line 32, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_leftNav.scss */
-  nav {
-    grid-area: navComponent;
-  }
-  /* line 36, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_leftNav.scss */
-  nav {
-    flex-direction: column;
-    height: 100%;
-    padding: 0 20px;
-    justify-content: start;
-  }
-  /* line 43, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_leftNav.scss */
-  nav ul {
-    margin-top: 15px;
-    flex-direction: column;
-    gap: 10px;
-    height: auto;
-  }
-}
-
-/* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
-.wrapper,
-main {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-}
-
-/* line 7, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
-main section:nth-child(n+2) {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/* line 12, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
-main section:nth-child(n+4) {
-  border-top: 0.1rem solid #D5D5D5;
-}
-
-@media only screen and (min-width: 768px) {
-  /* line 17, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
-  .wrapper {
-    grid-template-columns: 70px 1fr;
-    grid-template-areas: "headerComponent headerComponent" "navComponent mainComponent";
-  }
-  /* line 25, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
-  main {
-    grid-area: mainComponent;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "tabs tabs" "alertComponent alertComponent" "mainReportComponent mainReportComponent" "dailyReportComponent mobileReportComponent" "socialComponent socialComponent" "membersComponent membersComponent" "activityComponent activityComponent" "messageComponent messageComponent" "settingsComponent settingsComponent";
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  /* line 43, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_main.scss */
-  main {
-    grid-template-areas: "tabs tabs" "alertComponent alertComponent" "mainReportComponent mainReportComponent" "dailyReportComponent mobileReportComponent" "socialComponent socialComponent" "membersComponent activityComponent" "messageComponent settingsComponent";
-  }
-}
-
-/* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_tabs.scss */
-.tabs {
-  background: #F7F7F7;
-  display: flex;
-  border-bottom: 0.1rem solid #ccc;
-  position: relative;
-  z-index: -1;
-  width: 100%;
-  top: -0.1rem;
-}
-
-/* line 11, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_tabs.scss */
-.tabs .item {
-  background: white;
-  border-right: 0.1rem solid #D5D5D5;
-  padding: 0 15px;
-  position: relative;
-  z-index: 1;
-  top: 0.1rem;
-}
-
-/* line 20, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_tabs.scss */
-.tabs .item h2 {
-  font-size: 1rem;
-}
-
-@media only screen and (min-width: 768px) {
-  /* line 25, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_tabs.scss */
-  .tabs {
-    grid-area: tabs;
-  }
-}
-
-/* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_alerts.scss */
-.alerts > .container {
-  margin-top: 12px;
-  background: #7477BF;
-  color: #FFFFFF;
-  font-weight: 200;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  border-radius: 5px;
-  padding: 6px 15px;
-  font-size: 0.875rem;
-}
-
-/* line 14, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_alerts.scss */
-.alerts strong {
-  font-weight: 400;
-}
-
-/* line 18, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_alerts.scss */
-.alerts .action {
-  cursor: pointer;
-}
-
-@media only screen and (min-width: 768px) {
-  /* line 24, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_alerts.scss */
-  .alerts {
-    grid-area: alertComponent;
-  }
-}
-
-/* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_reports.scss */
-.reports h2 {
-  margin-bottom: 0;
-}
-
-/* line 5, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_reports.scss */
-canvas {
-  margin: 20px 0;
-  width: 100% !important;
-  height: auto !important;
-}
-
-/* line 11, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_reports.scss */
-.reports.main {
-  margin-top: 15px;
-}
-
-/* line 15, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_reports.scss */
-.reports.main ul {
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  padding: 0;
-  margin: 0;
-  align-items: center;
-}
-
-/* line 24, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_reports.scss */
-.reports.main ul li {
-  padding: 2px 12px;
-  font-size: 14px;
-}
-
-/* line 29, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_reports.scss */
-.reports.main ul li:hover {
-  cursor: pointer;
-}
-
-/* line 33, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_reports.scss */
-.reports.main li.active {
-  background: #81C98F;
-  border-radius: 20px;
-  color: white;
-}
-
-@media only screen and (min-width: 768px) {
-  /* line 40, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_reports.scss */
-  .reports.main {
-    grid-area: mainReportComponent;
-  }
-  /* line 44, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_reports.scss */
-  .reports.daily {
-    grid-area: dailyReportComponent;
-  }
-  /* line 48, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_reports.scss */
-  .reports.mobile {
-    grid-area: mobileReportComponent;
-    border-left: 0.1rem solid #D5D5D5;
-  }
-  /* line 53, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_reports.scss */
-  .reports.main .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: end;
-  }
-}
-
-/* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_social.scss */
-.social {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-/* line 6, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_social.scss */
-.social .card {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  border: 0.1rem solid #D5D5D5;
-  background: #F7F7F7;
-  border-radius: 5px;
-  padding: 15px 20px;
-  column-gap: 15px;
-  margin-bottom: 20px;
-}
-
-/* line 17, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_social.scss */
-.social .icon {
-  color: white;
-  background: #7477BF;
-  border-radius: 50%;
-  display: flex;
-  align-self: center;
-  height: 60px;
-  width: 60px;
-  padding: 15px;
-  box-sizing: border-box;
-}
-
-/* line 29, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_social.scss */
-.social .icon img {
-  padding: 15px;
-}
-
-/* line 33, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_social.scss */
-.social .info {
-  display: flex;
-  flex-direction: column;
-}
-
-/* line 38, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_social.scss */
-.social .info h3 {
-  color: #6366B7;
-  font-weight: 600;
-  margin: 0;
-  font-size: 1rem;
-}
-
-/* line 45, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_social.scss */
-.social .info p {
-  margin: 0;
-  color: #777777;
-  font-size: 2.5rem;
-  line-height: 1;
-  font-weight: 200;
-}
-
-@media only screen and (min-width: 768px) {
-  /* line 54, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_social.scss */
-  .social {
-    grid-area: socialComponent;
-    grid-template-columns: 1fr 1fr 1fr !important;
-    column-gap: 10px;
-  }
-  /* line 60, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_social.scss */
-  .social h2 {
-    grid-column: span 3;
-  }
-}
-
-/* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
-.members .card:nth-child(n+3) {
-  border-top: 0.1rem solid #D5D5D5;
-}
-
-/* line 5, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
-.members .card {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: center;
-  text-align: center;
-  padding: 15px 0;
-}
-
-/* line 13, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
-.members .card:nth-of-type(1) {
-  padding-top: 0;
-}
-
-/* line 17, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
-.members .card .icon {
-  height: 55px;
-}
-
-/* line 21, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
-.members .card .icon img {
-  border-radius: 50%;
-  height: 100%;
-  width: auto;
-}
-
-/* line 27, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
-.members .info-section1 {
-  padding-top: 5px;
-}
-
-/* line 31, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
-.members .info-section1 h3 {
-  font-weight: 400;
-}
-
-/* line 35, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
-.members .info-section1 a {
-  text-decoration: none;
-  display: block;
-  color: #777AC1;
-}
-
-/* line 41, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
-.members .info-section1 h3,
-.members .info-section1 a,
-.members .info-section1 p,
-.members .info-section2 p {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 0.75rem;
-}
-
-@media only screen and (min-width: 768px) {
-  /* line 52, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
-  .members {
-    grid-area: membersComponent;
-  }
-  /* line 56, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
-  .members .card {
-    grid-template-columns: min-content max-content 1fr !important;
-    align-items: center;
-    column-gap: 10px;
-  }
-  /* line 62, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
-  .members .card .info-section1 {
-    text-align: left;
-  }
-  /* line 66, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_members.scss */
-  .members .card .info-section2 {
-    text-align: right;
-  }
-}
-
-/* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_activity.scss */
-.activity .card:nth-child(n+3) {
-  border-top: 0.1em solid #D5D5D5;
-}
-
-/* line 5, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_activity.scss */
-.activity .card {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 15px 0px;
-}
-
-/* line 14, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_activity.scss */
-.activity .card:nth-of-type(1) {
-  padding-top: 0;
-}
-
-/* line 18, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_activity.scss */
-.activity .card .icon {
-  height: 55px;
-}
-
-/* line 22, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_activity.scss */
-.activity .card .icon img {
-  border-radius: 50%;
-  height: 100%;
-  width: auto;
-}
-
-/* line 28, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_activity.scss */
-.activity .info-section1 {
-  padding-top: 5px;
-}
-
-/* line 32, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_activity.scss */
-.activity .info-section1 a {
-  text-decoration: none;
-  display: block;
-  color: #777AC1;
-}
-
-/* line 38, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_activity.scss */
-.activity .info-section1 a,
-.activity .info-section1 p,
-.activity .info-section2 p {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 0.75rem;
-}
-
-/* line 46, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_activity.scss */
-.activity .info-section2 {
-  display: none;
-}
-
-@media only screen and (min-width: 768px) {
-  /* line 51, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_activity.scss */
-  .activity {
-    grid-area: activityComponent;
-  }
-  /* line 55, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_activity.scss */
-  .activity .card {
-    grid-template-columns: min-content max-content 1fr !important;
-    align-items: center;
-    column-gap: 10px;
-  }
-  /* line 61, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_activity.scss */
-  .activity .card .info-section1 {
-    text-align: left;
-  }
-  /* line 65, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_activity.scss */
-  .activity .card .info-section2 {
-    text-align: right;
-    display: block;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  /* line 72, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_activity.scss */
-  .activity {
-    border-left: 0.1rem solid #D5D5D5;
-  }
-}
-
-/* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
-.message {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 15px;
-  justify-content: space-between;
-  align-items: stretch;
-  position: relative;
-}
-
-/* line 10, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
-.message legend {
-  padding: 0;
-  margin-bottom: 0.83rem;
-  font-weight: 700;
-  font-size: 0.95rem;
-}
-
-/* line 17, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
-.message label {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-/* line 28, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
-.message fieldset {
-  font-size: 0.95rem;
-  border: none;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 0;
-  margin: 0.83rem 0 0;
-}
-
-/* line 38, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
-.message input {
-  padding: 10px 10px;
-  background: #F7F7F7;
-  border: 0.1rem solid #D5D5D5;
-  border-radius: 5px;
-  flex: 0 100%;
-  height: 46px;
-  box-sizing: border-box;
-  font-size: 0.85rem;
-}
-
-/* line 49, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
-.message textarea {
-  margin-top: 15px;
-  background: #F7F7F7;
-  border: 0.1rem solid #D5D5D5;
-  border-radius: 5px;
-  flex: 0 100%;
-  height: 110px;
-  padding: 5px 10px;
-  box-sizing: border-box;
-  font-size: 0.85rem;
-}
-
-/* line 61, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
-input::placeholder,
-textarea::placeholder {
-  color: #BDBDBD;
-}
-
-/* line 66, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
-button[type="submit"] {
-  margin-top: 15px;
-  width: 100%;
-  padding: 8px 0;
-  color: #FFFFFF;
-  background: #7477BF;
-  border-radius: 5px;
-  border: 0.1rem solid #D5D5D5;
-  font-weight: 200;
-  cursor: pointer;
-}
-
-/* line 78, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
-.message .overlay {
-  position: absolute;
-  display: none;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: white;
-  z-index: 2;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-/* line 94, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
-.message .error {
-  color: red;
-  font-weight: 400;
-  margin-left: auto;
-  font-size: 0.75rem;
-}
-
-@media only screen and (min-width: 768px) {
-  /* line 102, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_message.scss */
-  .message {
-    grid-area: messageComponent;
-  }
-}
-
-/* line 1, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
-.settings {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 15px;
-  justify-content: space-between;
-  align-items: stretch;
-}
-
-/* line 9, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
-.settings .toggles {
-  display: grid;
-  align-items: center;
-  grid-template-columns: repeat(2, fit-content(300px));
-  justify-content: space-between;
-}
-
-/* line 16, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
-.settings .toggles label {
-  font-size: 0.85rem;
-}
-
-/* line 20, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
-.settings .toggles input {
-  cursor: pointer;
-  margin: 13px auto;
-  position: relative;
-  width: 85px;
-  height: 30px;
-  border-radius: 25px;
-  outline: none;
-  background-color: #ccc;
-  -webkit-appearance: none;
-  transition: background .3s;
-  border: 0.15em solid #c0c0c0;
-}
-
-/* line 34, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
-.settings .toggles input::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 15%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  height: 1rem;
-  width: 1rem;
-  background-color: white;
-  transition: left .3s;
-  border: 0.15rem solid #c0c0c0;
-}
-
-/* line 48, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
-.settings .toggles input:checked {
-  background-color: #7477BF;
-}
-
-/* line 52, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
-.settings .toggles input:checked::after {
-  left: 82%;
-}
-
-/* line 56, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
-.settings .toggles input::before {
-  content: 'OFF';
-  position: absolute;
-  top: 0.2rem;
-  right: 10px;
-  color: #fff;
-  font-weight: 200;
-}
-
-/* line 65, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
-.settings .toggles input:checked::before {
-  content: 'ON';
-  position: absolute;
-  top: 0.2rem;
-  left: 10px;
-  color: #fff;
-  font-weight: 200;
-}
-
-/* line 74, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
-.settings select {
-  margin-top: 15px;
-  background: #F7F7F7;
-  padding: 10px 10px;
-  border: 0.1rem solid #D5D5D5;
-  border-radius: 5px;
-}
-
-/* line 82, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
-.settings .actions {
-  margin-top: 15px;
-  column-gap: 10px;
-  grid-template-columns: 1fr 1fr;
-  display: grid;
-}
-
-/* line 89, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
-.settings .actions button.save {
-  width: 100%;
-  padding: 8px 0;
-  color: #FFFFFF;
-  background: #7477BF;
-  border-radius: 5px;
-  border: 0.1rem solid #D5D5D5;
-  font-weight: 200;
-  cursor: pointer;
-}
-
-/* line 100, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
-.settings .actions button.cancel {
-  width: 100%;
-  padding: 8px 0;
-  color: #FFFFFF;
-  background: #999;
-  border-radius: 5px;
-  border: 0.1rem solid #D5D5D5;
-  font-weight: 200;
-  cursor: pointer;
-}
-
-@media only screen and (min-width: 768px) {
-  /* line 113, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
-  .settings {
-    grid-area: settingsComponent;
-  }
-  /* line 117, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
-  .settings .toggles {
-    justify-content: flex-start;
-    column-gap: 40px;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  /* line 124, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
-  .settings {
-    border-left: 0.1rem solid #D5D5D5;
-  }
-  /* line 128, ../../../OneDrive/Documents/FEWD/P7/FEWD_P7/scss/components/_settings.scss */
-  .settings select {
-    height: 45px;
-    box-sizing: border-box;
-  }
-}
-
-/*# sourceMappingURL=styles.css.map */
+* { font-family: "Martel Sans", sans-serif; }
+
+body { margin: 0; padding: 0; }
+
+h2 { font-size: 0.95rem; }
+
+header { display: flex; flex-direction: row; background: #7477BF; padding: 12px; color: #fff; align-items: center; height: 55px; box-sizing: border-box; }
+
+header h1 { font-size: 1.25rem; }
+
+header strong { font-weight: 500; }
+
+.notification { margin-left: auto; height: 100%; border-right: 0.1rem solid #8E92B7; padding: 5px 10px; box-sizing: border-box; position: relative; }
+
+.notification img { width: auto; height: 100%; box-sizing: border-box; min-height: 0; transition: all .5s; }
+
+.notification img:hover { cursor: pointer; animation: shake 0.5s; animation-iteration-count: infinite; }
+
+@keyframes shake { 20% { transform: rotate(-90deg); }
+  100% { transform: rotate(90deg); } }
+
+.notification .new { content: ''; border-radius: 100%; background: #90EE90; position: absolute; top: 1px; right: 9px; height: 4px; width: 4px; }
+
+.drawer { position: absolute; background: lightcyan; right: 0; top: 35px; box-shadow: 0px 8px 20px 4px black; width: max-content; transform: translateX(-50%); left: 50%; display: none; }
+
+.drawer ul { list-style-type: none; margin: 0; text-align: left; color: black; padding: 0; }
+
+.drawer ul li + li { border-top: 0.1rem solid #D5D5D5; }
+
+.drawer li { padding: 10px; font-size: 0.83rem; flex-direction: row; display: flex; gap: 20px; }
+
+.drawer li .action { cursor: pointer; }
+
+.profile { display: flex; align-items: center; height: 100%; }
+
+.profile p { font-size: 0.75rem; font-weight: 200; }
+
+.profile img { border-radius: 50%; width: auto; height: 100%; margin: 0 10px; }
+
+header h1 { font-weight: 200; }
+
+@media only screen and (min-width: 768px) { header { grid-area: headerComponent; } }
+
+nav { display: flex; flex-direction: row; justify-content: center; align-items: center; background: #4D4C72; padding: 10px 40px; height: 50px; box-sizing: border-box; }
+
+nav ul { list-style-type: none; margin: 0; padding: 0; width: 100%; display: flex; justify-content: space-evenly; height: 100%; }
+
+nav li { display: inline-block; }
+
+nav li img { width: 100%; height: 100%; }
+
+@media only screen and (min-width: 768px) { nav { grid-area: navComponent; }
+  nav { flex-direction: column; height: 100%; padding: 0 20px; justify-content: start; }
+  nav ul { margin-top: 15px; flex-direction: column; gap: 10px; height: auto; } }
+
+.wrapper, main { display: grid; grid-template-columns: minmax(0, 1fr); }
+
+main section:nth-child(n+2) { padding-left: 15px; padding-right: 15px; }
+
+main section:nth-child(n+4) { border-top: 0.1rem solid #D5D5D5; }
+
+@media only screen and (min-width: 768px) { .wrapper { grid-template-columns: 70px 1fr; grid-template-areas: "headerComponent headerComponent" "navComponent mainComponent"; }
+  main { grid-area: mainComponent; grid-template-columns: 1fr 1fr; grid-template-areas: "tabs tabs" "alertComponent alertComponent" "mainReportComponent mainReportComponent" "dailyReportComponent mobileReportComponent" "socialComponent socialComponent" "membersComponent membersComponent" "activityComponent activityComponent" "messageComponent messageComponent" "settingsComponent settingsComponent"; } }
+
+@media only screen and (min-width: 1024px) { main { grid-template-areas: "tabs tabs" "alertComponent alertComponent" "mainReportComponent mainReportComponent" "dailyReportComponent mobileReportComponent" "socialComponent socialComponent" "membersComponent activityComponent" "messageComponent settingsComponent"; } }
+
+.tabs { background: #F7F7F7; display: flex; border-bottom: 0.1rem solid #ccc; position: relative; z-index: -1; width: 100%; top: -0.1rem; }
+
+.tabs .item { background: white; border-right: 0.1rem solid #D5D5D5; padding: 0 15px; position: relative; z-index: 1; top: 0.1rem; }
+
+.tabs .item h2 { font-size: 1rem; }
+
+@media only screen and (min-width: 768px) { .tabs { grid-area: tabs; } }
+
+.alerts > .container { margin-top: 12px; background: #7477BF; color: #FFFFFF; font-weight: 200; display: flex; flex-direction: row; justify-content: space-between; border-radius: 5px; padding: 6px 15px; font-size: 0.875rem; }
+
+.alerts strong { font-weight: 400; }
+
+.alerts .action { cursor: pointer; }
+
+@media only screen and (min-width: 768px) { .alerts { grid-area: alertComponent; } }
+
+.reports h2 { margin-bottom: 0; }
+
+canvas { margin: 20px 0; width: 100% !important; height: auto !important; }
+
+.reports.main { margin-top: 15px; }
+
+.reports.main ul { list-style-type: none; display: flex; flex-direction: row; padding: 0; margin: 0; align-items: center; }
+
+.reports.main ul li { padding: 2px 12px; font-size: 14px; }
+
+.reports.main ul li:hover { cursor: pointer; }
+
+.reports.main li.active { background: #81C98F; border-radius: 20px; color: white; }
+
+@media only screen and (min-width: 768px) { .reports.main { grid-area: mainReportComponent; }
+  .reports.daily { grid-area: dailyReportComponent; }
+  .reports.mobile { grid-area: mobileReportComponent; border-left: 0.1rem solid #D5D5D5; }
+  .reports.main .header { display: flex; flex-direction: row; justify-content: space-between; align-items: end; } }
+
+.social { display: grid; grid-template-columns: 1fr; }
+
+.social .card { display: grid; grid-template-columns: auto minmax(0, 1fr); border: 0.1rem solid #D5D5D5; background: #F7F7F7; border-radius: 5px; padding: 15px 20px; column-gap: 15px; margin-bottom: 20px; }
+
+.social .icon { color: white; background: #7477BF; border-radius: 50%; display: flex; align-self: center; height: 60px; width: 60px; padding: 15px; box-sizing: border-box; }
+
+.social .icon img { padding: 15px; }
+
+.social .info { display: flex; flex-direction: column; }
+
+.social .info h3 { color: #6366B7; font-weight: 600; margin: 0; font-size: 1rem; }
+
+.social .info p { margin: 0; color: #777777; font-size: 2.5rem; line-height: 1; font-weight: 200; }
+
+@media only screen and (min-width: 768px) { .social { grid-area: socialComponent; grid-template-columns: 1fr 1fr 1fr !important; column-gap: 10px; }
+  .social h2 { grid-column: span 3; } }
+
+.members .card:nth-child(n+3) { border-top: 0.1rem solid #D5D5D5; }
+
+.members .card { display: grid; grid-template-columns: 1fr; justify-content: center; text-align: center; padding: 15px 0; }
+
+.members .card:nth-of-type(1) { padding-top: 0; }
+
+.members .card .icon { height: 55px; }
+
+.members .card .icon img { border-radius: 50%; height: 100%; width: auto; }
+
+.members .info-section1 { padding-top: 5px; }
+
+.members .info-section1 h3 { font-weight: 400; }
+
+.members .info-section1 a { text-decoration: none; display: block; color: #777AC1; }
+
+.members .info-section1 h3, .members .info-section1 a, .members .info-section1 p, .members .info-section2 p { margin: 0; line-height: 1.15; font-size: 0.75rem; }
+
+@media only screen and (min-width: 768px) { .members { grid-area: membersComponent; }
+  .members .card { grid-template-columns: min-content max-content 1fr !important; align-items: center; column-gap: 10px; }
+  .members .card .info-section1 { text-align: left; }
+  .members .card .info-section2 { text-align: right; } }
+
+.activity .card:nth-child(n+3) { border-top: 0.1em solid #D5D5D5; }
+
+.activity .card { display: grid; grid-template-columns: 1fr; justify-content: center; align-items: center; text-align: center; padding: 15px 0px; }
+
+.activity .card:nth-of-type(1) { padding-top: 0; }
+
+.activity .card .icon { height: 55px; }
+
+.activity .card .icon img { border-radius: 50%; height: 100%; width: auto; }
+
+.activity .info-section1 { padding-top: 5px; }
+
+.activity .info-section1 a { text-decoration: none; display: block; color: #777AC1; }
+
+.activity .info-section1 a, .activity .info-section1 p, .activity .info-section2 p { margin: 0; line-height: 1.15; font-size: 0.75rem; }
+
+.activity .info-section2 { display: none; }
+
+@media only screen and (min-width: 768px) { .activity { grid-area: activityComponent; }
+  .activity .card { grid-template-columns: min-content max-content 1fr !important; align-items: center; column-gap: 10px; }
+  .activity .card .info-section1 { text-align: left; }
+  .activity .card .info-section2 { text-align: right; display: block; } }
+
+@media only screen and (min-width: 1024px) { .activity { border-left: 0.1rem solid #D5D5D5; } }
+
+.message { display: flex; flex-direction: column; padding-bottom: 15px; justify-content: space-between; align-items: stretch; position: relative; }
+
+.message legend { padding: 0; margin-bottom: 0.83rem; font-weight: 700; font-size: 0.95rem; }
+
+.message label { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+.message fieldset { font-size: 0.95rem; border: none; display: flex; flex-wrap: wrap; align-items: center; padding: 0; margin: 0.83rem 0 0; }
+
+.message input { padding: 10px 10px; background: #F7F7F7; border: 0.1rem solid #D5D5D5; border-radius: 5px; flex: 0 100%; height: 46px; box-sizing: border-box; font-size: 0.85rem; }
+
+.message textarea { margin-top: 15px; background: #F7F7F7; border: 0.1rem solid #D5D5D5; border-radius: 5px; flex: 0 100%; height: 110px; padding: 5px 10px; box-sizing: border-box; font-size: 0.85rem; }
+
+input::placeholder, textarea::placeholder { color: #BDBDBD; }
+
+button[type="submit"] { margin-top: 15px; width: 100%; padding: 8px 0; color: #FFFFFF; background: #7477BF; border-radius: 5px; border: 0.1rem solid #D5D5D5; font-weight: 200; cursor: pointer; }
+
+.message .overlay { position: absolute; display: none; width: 100%; height: 100%; top: 0; left: 0; right: 0; bottom: 0; background-color: white; z-index: 2; flex-direction: column; align-items: center; justify-content: center; }
+
+.message .error { color: red; font-weight: 400; margin-left: auto; font-size: 0.75rem; }
+
+.results { display: block; position: relative; width: 100%; }
+
+.results ul { list-style-type: none; padding: 0; margin: 0; position: absolute; display: flex; flex-direction: column; background: white; width: 100%; border: 0.1rem solid #D5D5D5; box-sizing: border-box; top: -4px; box-shadow: 2px 9px 20px 0px; border-radius: 0 0 5px 5px; border-top: none; }
+
+.results ul li { padding: 5px; visibility: visible; }
+
+.results ul li:hover { background: #F7F7F7; cursor: pointer; }
+
+.results ul li ~ li { border-top: 0.1rem solid #d5d5d5; }
+
+@media only screen and (min-width: 768px) { .message { grid-area: messageComponent; } }
+
+.settings { display: flex; flex-direction: column; padding-bottom: 15px; justify-content: space-between; align-items: stretch; }
+
+.settings .toggles { display: grid; align-items: center; grid-template-columns: repeat(2, fit-content(300px)); justify-content: space-between; }
+
+.settings .toggles label { font-size: 0.85rem; }
+
+.settings .toggles input { cursor: pointer; margin: 13px auto; position: relative; width: 85px; height: 30px; border-radius: 25px; outline: none; background-color: #ccc; -webkit-appearance: none; transition: background .3s; border: 0.15em solid #c0c0c0; }
+
+.settings .toggles input::after { content: ''; position: absolute; top: 50%; left: 15%; transform: translate(-50%, -50%); border-radius: 50%; height: 1rem; width: 1rem; background-color: white; transition: left .3s; border: 0.15rem solid #c0c0c0; }
+
+.settings .toggles input:checked { background-color: #7477BF; }
+
+.settings .toggles input:checked::after { left: 82%; }
+
+.settings .toggles input::before { content: 'OFF'; position: absolute; top: 0.2rem; right: 10px; color: #fff; font-weight: 200; }
+
+.settings .toggles input:checked::before { content: 'ON'; position: absolute; top: 0.2rem; left: 10px; color: #fff; font-weight: 200; }
+
+.settings select { margin-top: 15px; background: #F7F7F7; padding: 10px 10px; border: 0.1rem solid #D5D5D5; border-radius: 5px; }
+
+.settings .actions { margin-top: 15px; column-gap: 10px; grid-template-columns: 1fr 1fr; display: grid; }
+
+.settings .actions button.save { width: 100%; padding: 8px 0; color: #FFFFFF; background: #7477BF; border-radius: 5px; border: 0.1rem solid #D5D5D5; font-weight: 200; cursor: pointer; }
+
+.settings .actions button.cancel { width: 100%; padding: 8px 0; color: #FFFFFF; background: #999; border-radius: 5px; border: 0.1rem solid #D5D5D5; font-weight: 200; cursor: pointer; }
+
+@media only screen and (min-width: 768px) { .settings { grid-area: settingsComponent; }
+  .settings .toggles { justify-content: flex-start; column-gap: 40px; } }
+
+@media only screen and (min-width: 1024px) { .settings { border-left: 0.1rem solid #D5D5D5; }
+  .settings select { height: 45px; box-sizing: border-box; } }

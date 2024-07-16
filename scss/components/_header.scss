@@ -18,8 +18,6 @@ header strong {
 }
 
 .notification {
-    display: flex;
-    align-items: center;
     margin-left: auto;
     height: 100%;
     border-right: 0.1rem solid #8E92B7;
@@ -56,6 +54,42 @@ header strong {
     right: 9px;
     height: 4px;
     width: 4px;
+}
+
+.drawer {
+    position: absolute;
+    background: lightcyan;
+    right: 0;
+    top: 35px;
+    box-shadow: 0px 8px 20px 4px black;
+    width: max-content;
+    transform: translateX(-50%);
+    left: 50%;
+    display: none;
+}
+
+.drawer ul {
+    list-style-type: none;
+    margin: 0;
+    text-align: left;
+    color: black;
+    padding: 0;
+}
+
+.drawer ul li + li {
+    border-top: 0.1rem solid #D5D5D5;
+}
+
+.drawer li {
+    padding: 10px;
+    font-size: 0.83rem;
+    flex-direction: row;
+    display: flex;
+    gap: 20px;
+}
+
+.drawer li .action {
+    cursor: pointer;
 }
 
 .profile {

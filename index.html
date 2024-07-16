@@ -19,7 +19,18 @@
             <h1><strong>Web</strong>App&trade;</h1>
             <div class="notification">
                 <img src="svgs/bell.svg" alt="notification" />
-                <div class="drawer"></div>
+                <div class="drawer">
+                    <ul>
+                        <li>
+                            <div class="copy">you have 2 new messages</div>
+                            <div class="action">x</div>
+                        </li>
+                        <li>
+                            <div class="copy">there are 4 new members</div>
+                            <div class="action">x</div>
+                        </li>
+                    </ul>
+                </div>
                 <span class="new"></span>
             </div>
             <div class="profile">
@@ -215,6 +226,7 @@
 
                         <label for="user">Search for User</label>
                         <input type="text" id="user" name="user_name" placeholder="Search for User" autocomplete="off">
+                        <div class="results"></div>
                         <div class="error"></div>
 
                         <label for="message">Message for User</label>
@@ -232,12 +244,12 @@
                 <h2>SETTINGS</h2>
                 <div class="toggles">
                     <label>Send Email Notifications</label>
-                    <input type="checkbox" checked>
+                    <input type="checkbox" id="email" name="email" value="email">
                     <label>Send Profile to Public</label>
-                    <input type="checkbox" checked>
+                    <input type="checkbox" id="profile" name="profile" value="profile">
                 </div>
-                <select name="timezone_offset" id="timezone-offset" class="span5">
-                    <option value="" selected disabled hidden>Select Timezone</option>
+                <select name="timezone" id="timezone">
+                    <option value="not" selected disabled hidden>Select Timezone</option>
                     <option value="-12:00">(GMT -12:00) Eniwetok, Kwajalein</option>
                     <option value="-11:00">(GMT -11:00) Midway Island, Samoa</option>
                     <option value="-10:00">(GMT -10:00) Hawaii</option>
